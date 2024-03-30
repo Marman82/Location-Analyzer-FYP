@@ -33,15 +33,26 @@ Code for executing prediction [CNNinference.py](https://github.com/Marman82/Loca
 
 # Sample Image for Prediction
 
-**Fung Yu Ting**
+### Fung Yu Ting
+
 ![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/FungYuTing(1).JPG>)
-**Lion Rock**
+
+### Lion Rock
+
 ![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/LIONROCK(2).JPG>)
-**MacLehose Trail M102**
+
+### MacLehose Trail M102
+
 ![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/M102(2).JPG>)
-**MacLehose Trail M103**
+
+### MacLehose Trail M103
+
 ![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/M103(7).JPG>)
-**MacLehose Trail M104**
+
+### MacLehose Trail M104
+
 ![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/M104(4).JPG>)
-**Direction Slab**
+
+### Direction Slab
+
 ![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/DirectionSlab(1).JPG>)
