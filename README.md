@@ -52,7 +52,3 @@ Code for executing prediction [CNNinference.py](https://github.com/Marman82/Loca
 ### MacLehose Trail M104
 
 ![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/M104(4).JPG>)
-
-### Direction Slab
-
-![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/SamplePredImage/DirectionSlab(1).JPG>)
