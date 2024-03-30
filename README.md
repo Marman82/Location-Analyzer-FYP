@@ -1,6 +1,7 @@
 # How to train model
 
 Open file in `analyzer/CNN.py` then execute the code
+
 Default Requirement:
 
 1. Trainning Image inside `analyzer/TrainningSet/my_train`
@@ -8,12 +9,22 @@ Default Requirement:
 
 # Run Frontend
 
-Code for running `React Project`
+Code for running `React Project` in `/map`
 
 ```
 npm run start
 ```
 
-Run "uvicorn main:app --reload" to open connector between python and react
+Steps:
+
+1. Click upload button
+2. Select the image to predict (Limit to predict location stored in `analyzer/longlat.xlsx`)
+3. Wait for the prediction to run, the result will be automatically shown in the map
 
 # Run Backend
+
+Code for running `fastapi` in `analyzer/main.py`
+
+```
+uvicorn main:app --reload
+```
