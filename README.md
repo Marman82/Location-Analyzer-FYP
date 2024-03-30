@@ -1,6 +1,6 @@
 # How to train model
 
-Open file in `analyzer/CNN.py` then execute the code
+Open file in [GitHub Pages](https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/CNN.py) then execute the code
 
 Default Requirement:
 
