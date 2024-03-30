@@ -1,0 +1,13 @@
+torch
+numpy
+matplotlib
+pandas
+openpyxl
+torchvision
+easyocr
+plotly
+folium
+branca
+flask
+fastapi
+python-multipart
