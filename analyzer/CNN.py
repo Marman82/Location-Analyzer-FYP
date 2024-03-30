@@ -22,8 +22,8 @@ transformer = transforms.Compose([
 ])
 
 #DataLoader
-train_path=r"C:\Users\Mar\Desktop\Year4SemB\FYP\ocr\scene_detection\my_train\my_train"
-test_path=r"C:\Users\Mar\Desktop\Year4SemB\FYP\ocr\scene_detection\my_test\my_test"
+train_path=r"C:\Users\Mar\Desktop\Year4SemB\FYP\ocr\TrainningSet\my_train\my_train"
+test_path=r"C:\Users\Mar\Desktop\Year4SemB\FYP\ocr\TrainningSet\my_test\my_test"
 print(train_path,test_path)
 train_loader=DataLoader(
     torchvision.datasets.ImageFolder(train_path,transform=transformer),

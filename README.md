@@ -1,11 +1,17 @@
 # How to train model
 
+Open file in `analyzer/CNN.py` then execute the code
+Default Requirement:
+
+1. Trainning Image inside `analyzer/TrainningSet/my_train`
+2. Testing Image inside `analyzer/TrainningSet/my_test`
+
 # Run Frontend
 
-Run "nmp run start" for react `project`
+Code for running `React Project`
 
 ```
-nmp run start
+npm run start
 ```
 
 Run "uvicorn main:app --reload" to open connector between python and react
