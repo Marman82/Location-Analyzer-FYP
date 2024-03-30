@@ -34,14 +34,14 @@ Code for executing prediction [CNNinference.py](https://github.com/Marman82/Loca
 # Sample Image for Prediction
 
 Fung Yu Ting
-![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/FungYuTing(1).jpg>)
+![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/FungYuTing(1).JPG>)
 Lion Rock
-![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/LIONROCK(2).jpg>)
+![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/LIONROCK(2).JPG>)
 MacLehose Trail M102
-![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/M102(2).jpg>)
+![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/M102(2).JPG>)
 MacLehose Trail M103
-![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/M103(7).jpg>)
+![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/M103(7).JPG>)
 MacLehose Trail M104
-![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/M104(4).jpg>)
+![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/M104(4).JPG>)
 Direction Slab
-![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/DirectionSlab(1).jpg>)
+![alt text](<https://github.com/Marman82/Location-Analyzer-FYP/blob/main/analyzer/SamplePredImage/DirectionSlab(1).JPG>)
