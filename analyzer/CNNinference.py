@@ -24,8 +24,8 @@ import folium
 from branca.element import Element
 from flask import *
 
-train_path = r"scene_detection/my_train/my_train"
-pred_path = r"C:\Users\Mar\Desktop\Year4SemB\FYP\ocr"
+train_path = r"TrainningSet/my_train/my_train"
+pred_path = r"TrainningSet"
 
 # count excel row size
 book = load_workbook('longlat.xlsx')
@@ -116,7 +116,7 @@ class ConvNet(nn.Module):
         return output
 
 
-checkpoint = torch.load('best_checkpoint.model',
+checkpoint = torch.load('my_trainner.model',
                         map_location=torch.device('cpu'))
 model = ConvNet(num_classes=5)
 model.load_state_dict(checkpoint)
@@ -149,6 +149,7 @@ def prediction(imgPath: str):
 
 def findCoordinates(predicted_category: str):
     image_path = glob.glob(pred_path+'/*.jpg')[0]
+    print(image_path)
     pred_dict = {}
 
     long = 0
@@ -165,12 +166,13 @@ def findCoordinates(predicted_category: str):
             print("Long Lat: "+str(long), str(lat))
 
     if pred_dict[image_path[image_path.rfind('/')+1:]] == "Maclehose Trail":
+        print("Entered Machlehose Trail")
         reader = easyocr.Reader(['en', 'ch_tra'], gpu=False, verbose=False)
         # reader can't read chinese file name
-        result = reader.readtext('predict.jpg')
+        result = reader.readtext(image_path)
         # print(result)
 
-        img = cv2.imread('predict.jpg')
+        img = cv2.imread(image_path)
         image_path = 0
         for detection in result:
             text = detection[1].replace(" ", "")  # [[width,height],'OCR text']
