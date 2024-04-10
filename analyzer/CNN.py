@@ -35,16 +35,16 @@ test_loader = DataLoader(
     batch_size=128, shuffle=True
 )
 
-# categories (show all DIR folder name categories)
+# categories (show all folder name categories)
 root = pathlib.Path(train_path)
-classes = sorted([j.name.split('/')[-1] for j in root.iterdir()])
-print(classes)
+categories = sorted([j.name.split('/')[-1] for j in root.iterdir()])
+print(categories)
 
 # CNN Network
 
 
 class ConvNet(nn.Module):
-    def __init__(self, num_classes=5):
+    def __init__(self, num_categories=5):
         super(ConvNet, self).__init__()
 
         # Output size after convolution filter [(w-f+2P)/s]+1
@@ -54,10 +54,12 @@ class ConvNet(nn.Module):
         # s = stride
 
         # Input shape=(batch size,channel size,width,height)
+        # the 1st out_channel should be same as the 2nd in_channel
         self.conv1 = nn.Conv2d(
             in_channels=3, out_channels=12, kernel_size=3, stride=1, padding=1)
         self.bn1 = nn.BatchNorm2d(num_features=12)
         self.relu1 = nn.ReLU()
+        # group channels into a group
         self.pool = nn.MaxPool2d(kernel_size=2)
         self.conv2 = nn.Conv2d(
             in_channels=12, out_channels=20, kernel_size=3, stride=1, padding=1)
@@ -68,7 +70,8 @@ class ConvNet(nn.Module):
         self.bn3 = nn.BatchNorm2d(num_features=32)
         self.relu3 = nn.ReLU()
 
-        self.fc = nn.Linear(in_features=32*150*150, out_features=num_classes)
+        self.fc = nn.Linear(in_features=32*150*150,
+                            out_features=num_categories)
 
         # Feed forward function
     def forward(self, input):
@@ -93,12 +96,12 @@ class ConvNet(nn.Module):
         return output
 
 
-model = ConvNet(num_classes=5).to(device)
+model = ConvNet(num_categories=5).to(device)
 # Optimizer and loss function
 optimizer = Adam(model.parameters(), lr=0.001, weight_decay=0.0001)
 loss_function = nn.CrossEntropyLoss()
 
-num_epochs = 100
+numEpochs = 100
 # count image number to check
 train_count = len(glob.glob(train_path+'/**/*.jpg'))
 test_count = len(glob.glob(test_path+'/**/*.jpg'))
@@ -109,8 +112,8 @@ print(train_count, test_count)
 
 best_acc = 0.0
 
-for epoch in range(num_epochs):
-    # evaluating and trainning on train dataset
+for epoch in range(numEpochs):
+    # train dataset
     model.train()
     train_acc = 0.0
     train_loss = 0.0
@@ -135,7 +138,7 @@ for epoch in range(num_epochs):
     train_acc = train_acc/train_count
     train_loss = train_loss/train_count
 
-    # Evalutation on test dataset
+    # test dataset
     model.eval()
 
     test_acc = 0.0
@@ -153,7 +156,7 @@ for epoch in range(num_epochs):
     print('Epoch: '+str(epoch)+' Train Loss: '+str(train_loss) +
           ' Train Acc: '+str(train_acc)+' Test Acc: '+str(test_acc))
 
-    # Save the best model
+    # Save the highest acc model
     if test_acc > best_acc:
         torch.save(model.state_dict(), 'my_trainner.model')
         best_acc = test_acc
