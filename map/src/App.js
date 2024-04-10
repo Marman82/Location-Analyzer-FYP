@@ -11,14 +11,13 @@ function App() {
   return (
     <div
       style={{
-        border: "2px solid red",
         display: "flex",
         flexDirection: "row",
         width: "100vw",
         height: "100vh",
       }}
     >
-      <div style={{ border: "2px solid red", width: "50vw", height: "100vh" }}>
+      <div style={{ width: "50vw", height: "100vh" }}>
         <MapContainer
           center={pos}
           zoom={13}
@@ -28,7 +27,7 @@ function App() {
           <Maps selectPosition={selectPosition} />
         </MapContainer>
       </div>
-      <div style={{ border: "2px solid red", width: "50vw" }}>
+      <div style={{ width: "50vw" }}>
         <Search
           selectPosition={selectPosition}
           setSelectPosition={setSelectPosition}
